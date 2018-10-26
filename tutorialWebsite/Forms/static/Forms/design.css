@@ -1,0 +1,262 @@
+@font-face {
+    font-family: "Google Sans";
+    src: url("Font/GoogleSans-Regular.ttf");
+}
+
+/*the body of the page*/
+body {
+    background-color: #1b2431;
+    color: white;
+    font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+/*the top menu of any page with the buttons*/
+.menu {
+    padding-left: 1%;
+    background-color: #3b5998;
+    width: 100%;
+    height: 10%;
+    vertical-align: middle;
+    display: flex;
+    line-height: 150%;
+    max-height: 70px;
+}
+
+/*the div inside the menu where the button sit*/
+.menu-btnDiv {
+    padding-left: 1%;
+    padding-right: 3%;
+    background-color: #3b5998;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/*button inside a page*/
+.btn {
+    background: #f50057;
+    height: 2em;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+/*when you hover over a menu button */
+.btn-menu:hover {
+    background: #5277c7;
+}
+
+/*when you press a menu button */
+.btn-menu:active {
+    background: #305197;
+}
+
+/*button inside a menu*/
+.btn-menu {
+    font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    background: #3b5998;
+    height: 100%;
+    border: 0;
+    font-size: 100%;
+    color: white;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+    float: right;
+}
+
+/*when you hover over a button*/
+.btn:hover {
+    background-color: #ff3a7f;
+}
+
+/*when you press a button*/
+.btn:active {
+    background-color: #d10049;
+}
+
+/*the actual body of the page*/
+.card {
+    padding: 2%;
+    margin: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-height: 500px;
+    width: 80%;
+    background-color: #273142;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3%;
+}
+
+h1
+{
+    font-size: 270%;
+}
+
+/*the input text*/
+.input-text {
+    width: 89%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    transition: 0.5s;
+    outline: none;
+    margin-left: 1%;
+}
+
+/*string of the type of the question*/
+.type {
+    width: 10%;
+}
+
+/*the string of the question*/
+.question {
+    font-size: 2em;
+    margin: 0.5%;
+}
+
+/*when the input is typed on*/
+.input-text:focus {
+    border: 3px solid #4778d9;
+}
+
+/*drop menu button*/
+.dropbtn {
+    font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    background-color: #3b5998;
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    border: none;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+/*drop menu div*/
+.dropdown {
+    height: 100%;
+    float: right;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+/*drop menu div of links*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3b5998;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+/*the links in the drop menu*/
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s;
+}
+
+/*hover over the links in the div*/
+.dropdown-content a:hover {
+    background-color: #5277c7
+}
+
+/*hover over the content in the div*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*hover over the button in the div*/
+.dropdown:hover .dropbtn {
+    background-color: #5277c7;
+}
+
+
+.form-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+    float: left;
+}
+
+.form-radio:checked::before {
+    position: absolute;
+    font: 13px/1 "Google Sans", Arial, Helvetica, sans-serif;
+    ;
+    left: 11px;
+    top: 7px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+
+.form-radio:hover {
+    background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+    background-color: #f1f1f1;
+}
+
+.form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+    float: left;
+}
+
+.form-checkbox:checked::before {
+    content: ' '; display: block; 
+    position: absolute;
+    font: 13px/1 "Google Sans", Arial, Helvetica, sans-serif;
+    left: 11px;
+    top: 7px;
+    content: '\02143';
+    transform: rotate(40deg);
+}
+
+.form-checkbox:hover {
+    background-color: #f7f7f7;
+}
+
+.form-checkbox:checked {
+    background-color: #f1f1f1;
+}
+
+.form-lable {
+    float: left;
+    line-height: 55px;
+}

@@ -1,0 +1,21 @@
+{% extends 'Forms/index.htm' %}
+
+{% block title %} login {% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
+    
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!--
+        <lable for="useranme">Username</lable>
+        <input type="text" name='username' class="input-text">
+        <lable for="password">Password</lable>
+        <input type="password" name='password' class="input-text">
+        <br>
+        -->
+        <input type='submit' class='btn' value='login'>
+    </form>
+
+{% endblock %}
