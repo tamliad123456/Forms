@@ -10,8 +10,13 @@ def homepage(request):
         context = {}
         return render(request, 'Forms/homepage.htm', context)
     return redirect('login')
-
+'''
 def error404(request):
     context = {}
-    return render(request, 'Forms/index.html', context)
+    return render(request, 'Forms/index.htm', context)
+'''
+
+def createForm(request):
+    context = {}
+    return render(request, 'Forms/createForm.htm', context)
             

@@ -7,19 +7,23 @@
     <body>
         <div class="menu">
             <button class="btn-menu" style="font-size: 1.5em" onclick="window.location.href='../'"> FormCreator </button>
+            {% if user.is_authenticated %}
             <div class="menu-btnDiv">
                 <button class="btn-menu" onclick="window.location.href='../logout'"> LogOut </button>
-                <button class="btn-menu" onclick="window.location.href='AdminPanel.php'"> Admin Panel </button>
+                {% if user.is_superuser %}
+                <button class="btn-menu" onclick="window.location.href='../admin'"> Admin Panel </button>
+                {% endif %}
                 <div class="dropdown">
-                    <button class="dropbtn">Queries</button>
+                    <button class="dropbtn">Forms</button>
                     <div class="dropdown-content">
-                        <a href="menu.php">Show Queries</a>
-                        <a href="CreateQuery.php">Create Query</a>
+                        <a href="menu.php">Show Forms</a>
+                        <a href="../createForm">Create Form</a>
                     </div>
                 </div>
-                <button class="btn-menu" onclick="window.location.href='passwordChange'"> Change Password </button>
+                <button class="btn-menu" onclick="window.location.href='../passwordChange'"> Change Password </button>
                 <button class="btn-menu" onclick="window.location.href='../'"> Menu </button>
             </div>
+        {% endif %}
         </div>
         <div class="card" id="card">
             {% block content %}

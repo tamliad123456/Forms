@@ -10,5 +10,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name="Forms/login.htm"), name='login'),
     path('passwordChange/', auth_views.PasswordChangeView.as_view(template_name="Forms/changePassword.htm"), name='login'),
     path('doneChangingPass/',auth_views.PasswordChangeDoneView.as_view(template_name='Forms/homepage.htm'), name='password_change_done'),
-
+    path('createForm/', views.createForm, name='createForm')
 ]
