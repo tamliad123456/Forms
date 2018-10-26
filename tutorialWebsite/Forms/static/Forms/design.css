@@ -261,3 +261,9 @@ input[type='text'],[type='password'] {
     float: left;
     line-height: 55px;
 }
+
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}

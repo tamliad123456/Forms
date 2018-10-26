@@ -1,5 +1,17 @@
 {% extends "Forms/index.htm" %}
 {% block title %} Create Form {% endblock %}
+{% block js-files %} {% load static %}
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{% static "Forms/createform.js" %}"></script>
+{% endblock %}
 {% block content %}
-    <h1>hello this is the formCreation</h1>
+    <h1>Create Form</h1>
+    <center>
+			<input type='button' class='btn' value='Radio'>
+			<input type='button' class='btn' value='CheckBox'>
+			<input type='button' class='btn' value='Text' onclick="addQuestion('text');">
+    <table  style='width:85%;' id='questions'>
+    </table>
+</center>
+
 {% endblock %}

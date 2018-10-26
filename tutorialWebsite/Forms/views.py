@@ -16,6 +16,7 @@ def error404(request):
     return render(request, 'Forms/index.htm', context)
 '''
 
+@login_required(login_url='/login')
 def createForm(request):
     context = {}
     return render(request, 'Forms/createForm.htm', context)
