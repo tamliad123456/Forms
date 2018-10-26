@@ -1,14 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class User(models.Model):
-    username = models.CharField(max_length=250)
-    password = models.CharField(max_length=32)
-    bans = models.IntegerField()
-    forms = models.CharField(max_length=1000)
-
-    def __str__(self):
-        return self.username
 
 class Form(models.Model):
     name = models.CharField(max_length=50)
