@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='/login')
 def homepage(request):
     if request.user.is_authenticated:
-        context = {}
+        context = {'username':request.user}
         return render(request, 'Forms/homepage.htm', context)
     return redirect('login')
 '''

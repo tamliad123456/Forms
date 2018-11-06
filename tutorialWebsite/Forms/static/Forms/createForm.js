@@ -54,10 +54,12 @@ function remove(remid)
     else{
         for(var i = remid + 1; i <= id; i++)
         {
+            console.log(i);
+            document.getElementById("q" + i.toString()).name = "q" + (i - 1).toString();
             document.getElementById("q" + i.toString()).id = "q" + (i - 1).toString();
-            document.getElementById("qtext" + i.toString()).innerHtml = "question" + (i - 1).toString();
+            document.getElementById("qtext" + i.toString()).innerHtml = "Question" + (i - 1).toString();
             document.getElementById("qtext" + i.toString()).id = "qtext" + (i - 1).toString();
-            document.getElementById("remq" + i.toString()).onclick = 'remove(' + (i - 1).toString() + ')';
+            document.getElementById("remq" + i.toString()).onclick = "remove('" + (i - 1).toString() + "')";
         }
     }
     document.getElementById("questions").deleteRow(remid - 1);
